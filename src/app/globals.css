@@ -2,7 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+.banner{
+  background-image: url("https://i.ibb.co.com/Y3MKwWK/1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner2{
+  background-image: url("https://i.ibb.co.com/XYr7xpb/2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner3{
+  background-image: url("https://i.ibb.co.com/K0k2wNQ/3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner4{
+  background-image: url("https://i.ibb.co.com/y09kxv3/4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner5{
+  background-image: url("https://i.ibb.co.com/vVjCGGs/5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner6{
+  background-image: url("https://i.ibb.co.com/26TJCt1/6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.primary{
+  color: #FF3811;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +66,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
