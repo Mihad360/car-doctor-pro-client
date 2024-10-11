@@ -1,11 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { services } from "@/app/lib/services";
 
 
-const Services = () => {
+const Services = async () => {
+
+  const getServices =async () => {
+    const res = await fetch('http://localhost:3000/services/api/get-services')
+    const services = res.json()
+    return services
+  }
+
+  const data = await getServices()
+console.log(data);
     return (
         <div>
             <div className="max-w-7xl mx-auto">
@@ -15,7 +24,7 @@ const Services = () => {
                 <div className="flex justify-center pt-12 pb-12">
                     <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
                         {
-                            services.map(service => <div key={service._id}><div className="card bg-base-100 w-96 shadow-xl">
+                            data.map(service => <div key={service._id}><div className="card bg-base-100 w-96 shadow-xl">
                                 <figure>
                                 <Image className="h-72 w-full" width={200} height={250} src={service.img} alt="image"/>
                                 </figure>
@@ -25,8 +34,8 @@ const Services = () => {
                                   </h2>
                                   <div className="card-actions items-center flex justify-between">
                                     <div className="text-[#FF3811] font-semibold text-lg">Price: ${service.price}</div>
-                                    <button className="text-[#FF3811] font-semibold text-2xl hover:bg-gray-200 p-2 rounded-lg"><FaArrowRightLong />
-                                    </button>
+                                    <Link href={`/services/${service._id}`}><button className="text-[#FF3811] font-semibold text-2xl hover:bg-gray-200 p-2 rounded-lg"><FaArrowRightLong />
+                                    </button></Link>
                                   </div>
                                 </div>
                               </div></div>)

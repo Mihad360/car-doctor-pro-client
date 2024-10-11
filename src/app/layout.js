@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
+import AuthProvider from "./authentication/AuthProvider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -19,13 +20,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.className} antialiased bg-gray-100 min-h-screen`}
       >
-        <div>
-          <Navbar></Navbar>
-        </div>
-        {children}
-        <div>
-          <Footer></Footer>
-        </div>
+        <AuthProvider>
+          <div>
+            <Navbar></Navbar>
+          </div>
+          {children}
+          <div>
+            <Footer></Footer>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
