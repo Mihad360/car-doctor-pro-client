@@ -13,7 +13,7 @@ export const services = [
             },
             {
                 "name": "24/7 Quality Service",
-                "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
+                "details": "Fuga nzumquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
             },
             {
                 "name": "Easy Customer Service",
